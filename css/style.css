@@ -1,0 +1,339 @@
+/* start global rules*/
+
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787E0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end global rules*/
+
+body{
+
+}
+
+/* header */
+
+header{
+    width: 100%;
+    top : 0;
+    box-shadow: 0px 2px 20px grey;
+    z-index: 1;
+}
+
+header .container{
+    background-color: white;
+    width: calc(100% - 30px);
+    height: 70px;
+    padding: 0 20px 0 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    justify-content: space-around;
+    margin-top: 0;
+}
+
+header .container button{
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header .container .logo{
+    width: 90px;
+    padding: 10px;
+}
+
+#search_bar{
+    display: inline;
+    width: 50%;
+    height: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border:10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50px;
+    display: flex;
+}
+
+#search_bar #search_bar_input{
+    width: 90%;
+    height: 70%;
+    display: block;
+    margin: auto;
+    border: none;
+    outline-style: none;
+}
+
+#search_bar .search_form{
+    width: 95%;
+    /* background-color: red; */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#search_bar .search_form .submit_btn{
+    margin: auto;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+#search_bar .search_form .submit_btn:hover{
+    color: grey;
+}
+
+header .container .header_button{
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    font-weight: 400;
+}
+
+.header_button:hover{
+    color: grey;
+}
+
+header .container .box_sty{
+    height: 60%;
+    width: 70px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0;
+    border-width: 1px;
+    background-color: white;
+}
+
+header .container .box_logo{
+    width: 40px;
+}
+
+header .container .box_sty:hover{
+    background-color: rgb(0, 0, 0, 5%);
+}
+
+header .container .box_inv{
+    color:white;
+    background-color: black;
+}
+header .container .box_inv:hover{
+    color: black;
+}
+
+header .container .three_dashes{
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 20px;
+}
+
+/* Medium */
+@media (max-width: 992px) {
+    .header_button{
+        display: none;
+    }
+}
+
+/* Small */
+@media (max-width: 768px) {
+
+    header .container #search_bar, .box_button{
+        display: none;
+    }
+
+    header .container{
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px) {
+
+    header .container .three_dashes{
+        display: none;
+    }
+}
+
+
+/* end header */
+
+/* landing */
+
+.landing .card img{
+    width: 100%;
+}
+
+.landing .card .card_info{
+    line-height: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+.landing .card .card_info h2{
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.landing .card .card_info p{
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    
+    .landing .card{
+        position: relative;
+    }
+    
+    .landing .card .card_info{
+        width: 350px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        box-shadow: 2px 2px 5px grey;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing .card{
+        padding: 10px;
+        box-shadow: 2px 2px 10px grey;
+    }
+}
+
+/* end landing */
+
+/* courses */
+
+.courses .container .courses_list li{
+    display: inline;
+    font-weight: bold;
+    margin: 10px;
+    color: grey;
+    line-height: 2;
+}
+
+.courses .container .courses_list li:first-child{
+    color: black;
+}
+
+.courses .container .courses_reco{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.courses .container .selected_courses{
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+.courses .container .selected_courses .course_title,
+.courses .container .selected_courses .course_desc
+{
+    margin: 20px;
+}
+
+.courses .container .selected_courses .explore{
+
+    margin: 10px 20px;
+    padding: 10px;
+    color: black;
+    font-weight: 700;
+    border-style: solid;
+    border-radius: 0;
+    border-width: 1px;
+    background-color: white;
+}
+.courses .container .selected_courses .explore:hover{
+    background-color: rgb(0, 0, 0, 5%);
+}
+
+.courses .container .courses_reco li{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px;
+    text-align: left;
+}
+
+.courses .container .courses_reco li img{
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+.courses .container .courses_reco li .title{
+    margin: 5px;
+    font-size: 15px;
+}
+
+.courses .container .courses_reco li .author{
+    margin: 5px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.courses .container .courses_reco li .price{
+    padding-left: 10px;
+    margin: 5px;
+}
+
+/* end courses */
+
+/* footer */
+footer{
+    margin-top: 50px;
+    height: 70px;
+    background-color: black;
+}
+
+footer .logo{
+    width: 100px;
+    margin: 10px 20px;
+}
+
+/* end footer */
