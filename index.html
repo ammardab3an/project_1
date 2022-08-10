@@ -22,48 +22,47 @@
 <body>
     
     <header>
-        <div class="container">
-            <div class="three_dashes">
+        <nav>
+            <picture class="three_dashes">
                 <i class="fa fa-list-dots"></i>
-            </div>
+            </picture>
 
             <img class="logo" src="./media/logo-udemy.svg" alt="logo">
 
-            <button class="header_button">Categories</button>
+            <a href="/categories" class="nav_link">Categories</a>
 
-            <div id="search_bar">
+            <section id="search_bar">
                 <form class="search_form" action="GET">
                     <button type="submit" class="submit_btn"><i class="fa fa-search"></i></button>
                     <input type="text" name="search_text" id="search_bar_input" placeholder="Search for anything">
                 </form>
-            </div>
-
-            <button class="header_button">Udemy Businesses</button>
-            <button class="header_button">Teach on Udemy</button>
+            </section>
+            
+            <a href="/businesses" class="nav_link">Udemy Businesses</a>
+            <a href="/teach" class="nav_link">Teach on Udemy</a>
             
             <button class="box_button box_sty">Log in</button>
             <button class="box_button box_sty box_inv">Sign up</button>
             <button class="box_button box_sty box_logo"><i class="fa fa-globe"></i></button>
-
-        </div>
+        </nav>
     </header>
 
     
-    <div id="landing" class="landing">
+    <section id="landing" class="landing">
         <div class="container">
             <div class="card">
-                <img src="./media/e6cc1a30-2dec-4dc5-b0f2-c5b656909d5b.jpg" >
+                <img src="./media/e6cc1a30-2dec-4dc5-b0f2-c5b656909d5b.jpg" alt="A woman sitting on a chair and looking proud">
                 <div class="card_info">
                     <h2>Learning that gets you</h2>
                     <p>Skills for your present (and your future). Get started with us.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="courses" class="courses">
+    <main id="courses" class="courses">
 
-        <div class="container">
+        <section class="container">
             <h2>A broad selection of courses</h2>
             <p>Choose from 185,000 online video courses with new additions published every month</p>
             <ul class="courses_list">
@@ -75,9 +74,9 @@
                 <li>AWS Certification</li>
                 <li>Drawing</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="container">
+        <section class="container">
             <div class="selected_courses">
 
                 <h2 class="course_title">Expand your career opportunities with Python</h2>
@@ -88,45 +87,55 @@
                 <ul class="courses_reco">
                     
                     <li>
-                        <img src="./media/1.jpg">
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
+                        <figure>
+                            <img src="./media/1.jpg" alt="Learn Python: The Complete Python Programming Course">
+                            <figcaption>Learn Python: The Complete Python Programming Course</figcaption>
+                        </figure>
                         <h4 class="author">Avinash Jain, The Codex</h4>
                         <h3 class="price">$94.99</h3>
                     </li>
                     
                     <li>
-                        <img src="./media/2.jpg">
-                        <h3 class="title">Learning Python for Data Analysis and Visualization</h3>
+                        <figure>
+                            <img src="./media/2.jpg" alt="Learning Python for Data Analysis and Visualization">
+                            <figcaption>Learning Python for Data Analysis and Visualization</figcaption>
+                        </figure>
                         <h4 class="author">Avinash Jain, The Codex</h4>
                         <h3 class="price">$94.99</h3>
                     </li>
                     
                     <li>
-                        <img src="./media/3.jpg">
-                        <h3 class="title">Python for Beginners - Learn Programming from scratch</h3>
+                        <figure>
+                            <img src="./media/3.jpg" alt="Python for Beginners - Learn Programming from scratch">
+                            <figcaption>Python for Beginners - Learn Programming from scratch</figcaption>
+                        </figure>
                         <h4 class="author">Avinash Jain, The Codex</h4>
                         <h3 class="price">$94.99</h3>
                     </li>
                     
                     <li>
-                        <img src="./media/4.jpg">
-                        <h3 class="title">Learn Python: Python for Beginners</h3>
+                        <figure>
+                            <img src="./media/4.jpg" alt="Learn Python: Python for Beginners">
+                            <figcaption>Learn Python: Python for Beginners</figcaption>
+                        </figure>
                         <h4 class="author">Avinash Jain, The Codex</h4>
                         <h3 class="price">$94.99</h3>
                     </li>
                     
                     <li>
-                        <img src="./media/4.jpg">
-                        <h3 class="title">Python Beyond the Basics - Object-Oriented Programming</h3>
+                        <figure>
+                            <img src="./media/4.jpg" alt="Python Beyond the Basics - Object-Oriented Programming">
+                            <figcaption>Python Beyond the Basics - Object-Oriented Programming</figcaption>
+                        </figure>
                         <h4 class="author">Avinash Jain, The Codex</h4>
                         <h3 class="price">$94.99</h3>
                     </li>
                 </ul>
 
             </div>
-        </div>
+        </section>
 
-    </div>
+    </main>
 
 
     <footer>
