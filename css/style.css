@@ -60,6 +60,7 @@ body{
 
 header{
     width: 100%;
+    position: sticky;
     top : 0;
     box-shadow: 0px 2px 20px grey;
     z-index: 1;
@@ -123,6 +124,7 @@ header nav .logo{
     background-color: transparent;
     border: none;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #search_bar .search_form .submit_btn:hover{

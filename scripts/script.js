@@ -55,6 +55,7 @@ for (const group of groups){
 const search_btn = document.getElementById("search_submit_btn");
 search_btn.addEventListener("click", (e) => {
     e.preventDefault();
+    document.getElementById("courses").scrollIntoView({behavior: "smooth", block: "center"});
     const filter_s = document.getElementById("search_bar_input").value;
     load_courses(cur, filter_s);
 });
