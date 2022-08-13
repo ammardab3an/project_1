@@ -260,13 +260,17 @@ header nav .three_dashes{
     line-height: 2;
 }
 
-.courses .container .courses_list li:first-child{
+.courses .container .courses_list li:hover{
+    cursor: pointer;
+}
+
+.courses .container .courses_list li.black{
     color: black;
 }
 
 .courses .container .courses_reco{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .courses .container .selected_courses{
