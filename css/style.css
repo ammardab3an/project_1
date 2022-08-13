@@ -65,7 +65,7 @@ header{
     z-index: 1;
 }
 
-header .container{
+header nav{
     background-color: white;
     width: calc(100% - 30px);
     height: 70px;
@@ -77,13 +77,13 @@ header .container{
     margin-top: 0;
 }
 
-header .container button{
+header nav button{
     height: 80%;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-header .container .logo{
+header nav .logo{
     width: 90px;
     padding: 10px;
 }
@@ -129,17 +129,19 @@ header .container .logo{
     color: grey;
 }
 
-header .container .header_button{
-    border: none;
-    background-color: rgb(0, 0, 0, 0);
+.nav_link{
+    text-decoration: none;
     font-weight: 400;
+    color: black;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.header_button:hover{
+.nav_link:hover{
     color: grey;
 }
 
-header .container .box_sty{
+header nav .box_sty{
     height: 60%;
     width: 70px;
     font-size: 14px;
@@ -149,23 +151,23 @@ header .container .box_sty{
     background-color: white;
 }
 
-header .container .box_logo{
+header nav .box_logo{
     width: 40px;
 }
 
-header .container .box_sty:hover{
+header nav .box_sty:hover{
     background-color: rgb(0, 0, 0, 5%);
 }
 
-header .container .box_inv{
+header nav .box_inv{
     color:white;
     background-color: black;
 }
-header .container .box_inv:hover{
+header nav .box_inv:hover{
     color: black;
 }
 
-header .container .three_dashes{
+header nav .three_dashes{
     font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
@@ -174,7 +176,7 @@ header .container .three_dashes{
 
 /* Medium */
 @media (max-width: 992px) {
-    .header_button{
+    .nav_link{
         display: none;
     }
 }
@@ -182,18 +184,18 @@ header .container .three_dashes{
 /* Small */
 @media (max-width: 768px) {
 
-    header .container #search_bar, .box_button{
+    header nav #search_bar, .box_button{
         display: none;
     }
 
-    header .container{
+    header nav{
         justify-content: space-between;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
-    header .container .three_dashes{
+    header nav .three_dashes{
         display: none;
     }
 }
@@ -301,14 +303,20 @@ header .container .three_dashes{
     text-align: left;
 }
 
-.courses .container .courses_reco li img{
+.courses .container .courses_reco li figure{
+    margin: 0;
+}
+
+.courses .container .courses_reco li figure img{
     border-style: solid;
     border-width: 1px;
     border-color: grey;
+    width: 100%;
 }
-.courses .container .courses_reco li .title{
+.courses .container .courses_reco li figure figcaption{
     margin: 5px;
     font-size: 15px;
+    width: 100%;
 }
 
 .courses .container .courses_reco li .author{
