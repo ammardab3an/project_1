@@ -27,7 +27,7 @@ function stars(rating){
 
 function load_courses(group, filter_s=''){
     
-    fetch(`./data/${group.slice(2)}_res.json`)
+    fetch(`https://ammardab3an-json-server.herokuapp.com/${group}`)
         .then(res => res.json())
         .then(data => {
             const con = document.getElementById("selected_courses");
