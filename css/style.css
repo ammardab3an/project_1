@@ -137,6 +137,7 @@ header nav .logo{
     color: black;
     margin-top: auto;
     margin-bottom: auto;
+    text-align: center;
 }
 
 .nav_link:hover{
@@ -184,10 +185,14 @@ header nav .three_dashes{
 }
 
 /* Small */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
-    header nav #search_bar, .box_button{
+    header nav .box_button{
         display: none;
+    }
+
+    #search_bar{
+        width: 70%;
     }
 
     header nav{
@@ -329,6 +334,14 @@ header nav .three_dashes{
     margin: 5px;
     font-weight: 400;
     font-size: 12px;
+}
+
+.courses .container .courses_reco li .stars{
+    color: yellowgreen;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .courses .container .courses_reco li .price{
