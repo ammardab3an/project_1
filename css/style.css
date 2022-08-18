@@ -259,25 +259,8 @@ header nav .three_dashes{
 
 /* courses */
 
-.courses .container .courses_list li{
-    display: inline;
-    font-weight: bold;
-    margin: 10px;
-    color: grey;
-    line-height: 2;
-}
-
-.courses .container .courses_list li:hover{
-    cursor: pointer;
-}
-
-.courses .container .courses_list li.black{
-    color: black;
-}
-
-.courses .container .courses_reco{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.nav-link.active{
+    color: black !important;
 }
 
 .courses .container .selected_courses{
@@ -293,7 +276,6 @@ header nav .three_dashes{
 }
 
 .courses .container .selected_courses .explore{
-
     margin: 10px 20px;
     padding: 10px;
     color: black;
@@ -307,36 +289,33 @@ header nav .three_dashes{
     background-color: rgb(0, 0, 0, 5%);
 }
 
-.courses .container .courses_reco li{
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 20px;
+.courses .container .courses_reco .carousel-item{
     text-align: left;
 }
 
-.courses .container .courses_reco li figure{
+.courses .container .courses_reco .carousel-item figure{
     margin: 0;
 }
 
-.courses .container .courses_reco li figure img{
+.courses .container .courses_reco .carousel-item figure img{
     border-style: solid;
     border-width: 1px;
     border-color: grey;
     width: 100%;
 }
-.courses .container .courses_reco li figure figcaption{
+.courses .container .courses_reco .carousel-item figure figcaption{
     margin: 5px;
     font-size: 15px;
     width: 100%;
 }
 
-.courses .container .courses_reco li .author{
+.courses .container .courses_reco .carousel-item .author{
     margin: 5px;
     font-weight: 400;
     font-size: 12px;
 }
 
-.courses .container .courses_reco li .stars{
+.courses .container .courses_reco .carousel-item .stars{
     color: yellowgreen;
     font-size: 12px;
     margin-left: auto;
@@ -344,7 +323,7 @@ header nav .three_dashes{
     
 }
 
-.courses .container .courses_reco li .price{
+.courses .container .courses_reco .carousel-item .price{
     padding-left: 10px;
     margin: 5px;
 }

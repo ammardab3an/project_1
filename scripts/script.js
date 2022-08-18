@@ -32,42 +32,49 @@ function load_courses(group, filter_s=''){
         .then(data => {
             const con = document.getElementById("selected_courses");
             con.innerHTML = `
+                
                 <h2 class="course_title">${data.header}</h2>
                 <p class="course_desc">${data.description}</p>
                 <button class="explore">Explore ${document.getElementById(group).innerText}</button>
-                <ul id="courses_reco" class="courses_reco">
-                    ${data.courses.filter(course => course.title.toLowerCase().includes(filter_s.toLowerCase())).map(course => (`
-                        <li>
-                            <figure>
-                                <img src="${course.image}" alt="${course.title}">
-                                <figcaption>${course.title}</figcaption>
-                            </figure>
-                            ${course.instructors.map(instructor => `
-                                <h4 class="author">${instructor.name}</h4>
-                            `).join('\n')}
-                            <div class="stars">
-                                ${stars(course.rating)}
+
+                <div id="courses_reco" class="carousel slide courses_reco" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        ${data.courses.filter(course => course.title.toLowerCase().includes(filter_s.toLowerCase())).map((course, idx) => (`
+                            <div class="carousel-item ${idx===0 ? "active" : ""}">
+                                <figure>
+                                    <img class="d-block w-50" src="${course.image}" alt="${course.title}">
+                                    <figcaption>${course.title}</figcaption>
+                                </figure>
+                                ${course.instructors.map(instructor => `
+                                    <h4 class="author">${instructor.name}</h4>
+                                `).join('\n')}
+                                <div class="stars">
+                                    ${stars(course.rating)}
+                                </div>
+                                <h3 class="price">$${course.price}</h3>
                             </div>
-                            <h3 class="price">$${course.price}</h3>
-                        </li>
-                    `)).join('\n')}
-                </ul>
+                        `)).join('\n')}
+                    </div>
+                    <button class="text-bg-dark carousel-control-prev" type="button" data-bs-target="#courses_reco" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="text-bg-dark carousel-control-next" type="button" data-bs-target="#courses_reco" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             `;
         });
 }
 
 let cur = "c_python";
-document.getElementById(cur).classList.add("black");
 load_courses(cur);
 
 for (const group of groups){
     const btn = document.getElementById(group);
     btn.addEventListener("click", () => {
-        
-        document.getElementById(cur).classList.remove("black");
         cur = group;
-        document.getElementById(cur).classList.add("black");
-
         load_courses(group);
     });
 }
