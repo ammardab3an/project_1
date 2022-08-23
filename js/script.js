@@ -125,7 +125,7 @@ function gen_category(category){
 }
 
 async function load_top_categories(){
-    const categories = await (await fetch('./../json/categories.json')).json();
+    const categories = await (await fetch('./json/categories.json')).json();
     document.getElementById("top_categories_grid").innerHTML = Object.keys(categories).map(category => gen_category(categories[category])).join('\n');
 }
 
