@@ -23,18 +23,14 @@
     
     <header>
         <nav>
-            <picture class="three_dashes">
-                <i class="fa fa-list-dots"></i>
-            </picture>
-
             <img class="logo" src="./media/logo-udemy.svg" alt="logo">
 
             <a href="/categories" class="nav_link">Categories</a>
 
             <section id="search_bar">
                 <form class="search_form" action="GET">
-                    <button type="submit" class="submit_btn"><i class="fa fa-search"></i></button>
-                    <input type="text" name="search_text" id="search_bar_input" placeholder="Search for anything">
+                    <button id="search_submit_btn" type="submit" class="submit_btn"><i class="fa fa-search"></i></button>
+                    <input  id="search_bar_input" type="text" name="search_text" placeholder="Search for anything">
                 </form>
             </section>
             
@@ -44,6 +40,11 @@
             <button class="box_button box_sty">Log in</button>
             <button class="box_button box_sty box_inv">Sign up</button>
             <button class="box_button box_sty box_logo"><i class="fa fa-globe"></i></button>
+
+            
+            <picture class="three_dashes">
+                <i class="fa fa-list-dots"></i>
+            </picture>
         </nav>
     </header>
 
@@ -65,74 +66,26 @@
         <section class="container">
             <h2>A broad selection of courses</h2>
             <p>Choose from 185,000 online video courses with new additions published every month</p>
-            <ul class="courses_list">
-                <li>Python</li>
-                <li>Excel</li>
-                <li>Web Development</li>
-                <li>JavaScript</li>
-                <li>Data Science</li>
-                <li>AWS Certification</li>
-                <li>Drawing</li>
-            </ul>
         </section>
 
+        <nav class="container">
+            <ul class="courses_list">
+                <li id="c_python">Python</li>
+                <li id="c_excel">Excel</li>
+                <li id="c_web">Web Development</li>
+                <li id="c_js">JavaScript</li>
+                <li id="c_data">Data Science</li>
+                <li id="c_aws">AWS Certification</li>
+                <li id="c_draw">Drawing</li>
+            </ul>
+        </nav>
+
         <section class="container">
-            <div class="selected_courses">
 
-                <h2 class="course_title">Expand your career opportunities with Python</h2>
-                <p class="course_desc">Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to</p>
-
-                <button class="explore">Explore Python</button>
-
-                <ul class="courses_reco">
-                    
-                    <li>
-                        <figure>
-                            <img src="./media/1.jpg" alt="Learn Python: The Complete Python Programming Course">
-                            <figcaption>Learn Python: The Complete Python Programming Course</figcaption>
-                        </figure>
-                        <h4 class="author">Avinash Jain, The Codex</h4>
-                        <h3 class="price">$94.99</h3>
-                    </li>
-                    
-                    <li>
-                        <figure>
-                            <img src="./media/2.jpg" alt="Learning Python for Data Analysis and Visualization">
-                            <figcaption>Learning Python for Data Analysis and Visualization</figcaption>
-                        </figure>
-                        <h4 class="author">Avinash Jain, The Codex</h4>
-                        <h3 class="price">$94.99</h3>
-                    </li>
-                    
-                    <li>
-                        <figure>
-                            <img src="./media/3.jpg" alt="Python for Beginners - Learn Programming from scratch">
-                            <figcaption>Python for Beginners - Learn Programming from scratch</figcaption>
-                        </figure>
-                        <h4 class="author">Avinash Jain, The Codex</h4>
-                        <h3 class="price">$94.99</h3>
-                    </li>
-                    
-                    <li>
-                        <figure>
-                            <img src="./media/4.jpg" alt="Learn Python: Python for Beginners">
-                            <figcaption>Learn Python: Python for Beginners</figcaption>
-                        </figure>
-                        <h4 class="author">Avinash Jain, The Codex</h4>
-                        <h3 class="price">$94.99</h3>
-                    </li>
-                    
-                    <li>
-                        <figure>
-                            <img src="./media/4.jpg" alt="Python Beyond the Basics - Object-Oriented Programming">
-                            <figcaption>Python Beyond the Basics - Object-Oriented Programming</figcaption>
-                        </figure>
-                        <h4 class="author">Avinash Jain, The Codex</h4>
-                        <h3 class="price">$94.99</h3>
-                    </li>
-                </ul>
-
+            <div id="selected_courses" class="selected_courses">
+                <!-- auto generated area -->
             </div>
+
         </section>
 
     </main>
@@ -141,5 +94,7 @@
     <footer>
         <img class="logo" src="./media/logo-udemy-inverted.svg" alt="logo">
     </footer>
+
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
