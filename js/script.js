@@ -1,14 +1,44 @@
 // the following variables are going to be redefined in the init() function.
-window.CARDS_PER_SLIDE = 1;
 window.db = {};
 window.groups = [];
 window.selected_group = '';
+window.CARDS_PER_SLIDE = 1;
+window._DEV_ENV = window.location.hostname === "127.0.0.1";
+
+// constants
+const BREAKING_POINTS = {
+    _0_xs: 0,
+    _1_sm: 576,
+    _2_md: 768,
+    _3_lg: 992,
+    _4_xl: 1200,
+    _5_xxl: 1400
+};
+// cards_per_slide (and cards_bp) must be a factor of 12 : {1, 2, 3, 4, 6, 12}.
+const CARDS_BP = {
+    _0_xs: 1,
+    _1_sm: 2,
+    _2_md: 3,
+    _3_lg: 4,
+    _4_xl: 4,
+    _5_xxl: 6
+};
 
 // slides
+function calc_cards_per_slide_value() {
+    for (const bp of Object.keys(BREAKING_POINTS).reverse()) {
+        if (BREAKING_POINTS[bp] <= window.innerWidth) {
+            CARDS_PER_SLIDE = CARDS_BP[bp];
+            break;
+        }
+    }
+}
+
 function gen_stars(rating) {
 
     let ret = [];
-    for (let i = 1; i <= 5; i++) {
+    const MAX_NUMBER_OF_STARS = 5;
+    for (let i = 1; i <= MAX_NUMBER_OF_STARS; i++) {
         if (rating >= i) {
             ret.push('<i class="fa-solid fa-star"></i>');
         }
@@ -41,7 +71,7 @@ function gen_slides(courses) {
         }
 
         slides[slides.length - 1] += `
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="col-${12 / CARDS_PER_SLIDE}">
 
                 <figure>
                     <img class="d-block w-100" src="${course.image}" alt="${course.title}">
@@ -85,7 +115,13 @@ function load_groups_nav() {
     const sg = selected_group;
     groups_nav.innerHTML = groups.map(group => (`
         <li class="nav-item" id="${group}" role="presentation">
-            <button class="nav-link text-secondary ${group === sg ? "active" : ""}" data-bs-toggle="tab" type="button" aria-selected="${group === sg ? "true" : "false"}">${db[group].name}</button>
+            <button 
+                class="nav-link text-secondary ${group === sg ? "active" : ""}" 
+                data-bs-toggle="tab" type="button" 
+                aria-selected="${group === sg ? "true" : "false"}"
+                >
+                ${db[group].name}
+            </button>
         </li>
     `)).join('\n');
 
@@ -115,7 +151,7 @@ function init_search_submit_btn() {
 }
 
 // top categories
-function gen_category(category){
+function gen_category(category) {
     return `
     <div class="col">
         <img class="d-block w-75 m-auto" src="${category.img}" alt="${category.name}">
@@ -124,32 +160,17 @@ function gen_category(category){
     `
 }
 
-async function load_top_categories(){
+async function load_top_categories() {
     const categories = await (await fetch('./json/categories.json')).json();
     document.getElementById("top_categories_grid").innerHTML = Object.keys(categories).map(category => gen_category(categories[category])).join('\n');
 }
 
-function calc_cards_per_slide_value(){
-    if(window.innerWidth >= 992){
-        window.CARDS_PER_SLIDE = 4;
-    }
-    else if(window.innerWidth >= 768){
-        window.CARDS_PER_SLIDE = 3;
-    }
-    else if(window.innerWidth >= 576){
-        window.CARDS_PER_SLIDE = 2;
-    }
-    else{
-        window.CARDS_PER_SLIDE = 1;
-    }
-}
-
 (async function init() {
 
-    if(window._DEV_ENV){
-        window.db =  await (await fetch("./data/db.json")).json();
+    if (window._DEV_ENV) {
+        window.db = await (await fetch("./data/db.json")).json();
     }
-    else{
+    else {
         window.db = await (await fetch("https://ammardab3an-json-server.herokuapp.com/db")).json();
     }
 
