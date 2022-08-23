@@ -1,9 +1,6 @@
 /* start global rules*/
 
-:root {
-    --main-color: #2196F3;
-    --main-color-alt: #1787E0;
-}
+:root {}
 
 html {
     scroll-behavior: smooth;
@@ -21,52 +18,20 @@ ul {
     padding: 0;
 }
 
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
-
-/* Small */
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
-
-/* Medium */
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
-
-/* Large */
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-}
-
 /* end global rules*/
 
-body{
-
-}
+body {}
 
 /* header */
-
-header{
+header {
     width: 100%;
     position: sticky;
-    top : 0;
+    top: 0;
     box-shadow: 0px 2px 20px grey;
     z-index: 1;
 }
 
-header nav{
+header nav {
     background-color: white;
     width: calc(100% - 30px);
     height: 70px;
@@ -78,31 +43,31 @@ header nav{
     margin-top: 0;
 }
 
-header nav button{
+header nav button {
     height: 80%;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-header nav .logo{
+header nav .logo {
     width: 90px;
     padding: 10px;
 }
 
-#search_bar{
+#search_bar {
     display: inline;
     width: 50%;
     height: 70%;
     margin-top: auto;
     margin-bottom: auto;
-    border:10px;
+    border: 10px;
     border-width: 1px;
     border-style: solid;
     border-radius: 50px;
     display: flex;
 }
 
-#search_bar #search_bar_input{
+#search_bar #search_bar_input {
     width: 90%;
     height: 70%;
     display: block;
@@ -111,27 +76,26 @@ header nav .logo{
     outline-style: none;
 }
 
-#search_bar .search_form{
+#search_bar .search_form {
     width: 95%;
-    /* background-color: red; */
     display: flex;
     flex-flow: row nowrap;
 }
 
-#search_bar .search_form .submit_btn{
+#search_bar .search_form .submit_btn {
+    color: black;
     margin: auto;
-    padding: 10px;
     background-color: transparent;
     border: none;
     font-size: 20px;
     cursor: pointer;
 }
 
-#search_bar .search_form .submit_btn:hover{
+#search_bar .search_form .submit_btn:hover {
     color: grey;
 }
 
-.nav_link{
+.nav_link {
     text-decoration: none;
     font-weight: 400;
     color: black;
@@ -140,11 +104,11 @@ header nav .logo{
     text-align: center;
 }
 
-.nav_link:hover{
+.nav_link:hover {
     color: grey;
 }
 
-header nav .box_sty{
+header nav .box_sty {
     height: 60%;
     width: 70px;
     font-size: 14px;
@@ -154,23 +118,24 @@ header nav .box_sty{
     background-color: white;
 }
 
-header nav .box_logo{
+header nav .box_logo {
     width: 40px;
 }
 
-header nav .box_sty:hover{
+header nav .box_sty:hover {
     background-color: rgb(0, 0, 0, 5%);
 }
 
-header nav .box_inv{
-    color:white;
+header nav .box_inv {
+    color: white;
     background-color: black;
 }
-header nav .box_inv:hover{
+
+header nav .box_inv:hover {
     color: black;
 }
 
-header nav .three_dashes{
+header nav .three_dashes {
     font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
@@ -179,7 +144,7 @@ header nav .three_dashes{
 
 /* Medium */
 @media (max-width: 992px) {
-    .nav_link{
+    .nav_link {
         display: none;
     }
 }
@@ -187,59 +152,58 @@ header nav .three_dashes{
 /* Small */
 @media (max-width: 767px) {
 
-    header nav .box_button{
+    header nav .box_button {
         display: none;
     }
 
-    #search_bar{
+    #search_bar {
         width: 70%;
     }
 
-    header nav{
+    header nav {
         justify-content: space-between;
     }
 }
 
 @media (min-width: 769px) {
 
-    header nav .three_dashes{
+    header nav .three_dashes {
         display: none;
     }
 }
 
-
 /* end header */
 
 /* landing */
-
-.landing .card img{
+.landing .card img {
     width: 100%;
 }
 
-.landing .card .card_info{
-    line-height: 1;
+.landing .card .card_info {
+    line-height: 1.5;
     background-color: white;
     padding: 20px;
 }
 
-.landing .card .card_info h2{
+.landing .card .card_info h2 {
     font-size: 30px;
     margin: 0;
     padding-bottom: 20px;
 }
-.landing .card .card_info p{
+
+.landing .card .card_info p {
     font-size: 18px;
     margin: 0;
 }
 
 /* Small */
 @media (min-width: 768px) {
-    
-    .landing .card{
+
+    .landing .card {
         position: relative;
     }
-    
-    .landing .card .card_info{
+
+    .landing .card .card_info {
         width: 350px;
         position: absolute;
         top: 50px;
@@ -249,7 +213,7 @@ header nav .three_dashes{
 }
 
 @media (max-width: 768px) {
-    .landing .card{
+    .landing .card {
         padding: 10px;
         box-shadow: 2px 2px 10px grey;
     }
@@ -258,24 +222,22 @@ header nav .three_dashes{
 /* end landing */
 
 /* courses */
-
-.nav-link.active{
+.nav-link.active {
     color: black !important;
 }
 
-.courses .container .selected_courses{
+.courses .selected_group {
     border-style: solid;
     border-width: 1px;
     border-color: grey;
 }
 
-.courses .container .selected_courses .course_title,
-.courses .container .selected_courses .course_desc
-{
+.courses .selected_group .course_title,
+.courses .selected_group .course_desc {
     margin: 20px;
 }
 
-.courses .container .selected_courses .explore{
+.courses .selected_group .explore {
     margin: 10px 20px;
     padding: 10px;
     color: black;
@@ -285,59 +247,69 @@ header nav .three_dashes{
     border-width: 1px;
     background-color: white;
 }
-.courses .container .selected_courses .explore:hover{
+
+.courses .selected_group .explore:hover {
     background-color: rgb(0, 0, 0, 5%);
 }
 
-.courses .container .courses_reco .carousel-item{
+.courses .courses_list .carousel-item {
     text-align: left;
 }
 
-.courses .container .courses_reco .carousel-item figure{
+.courses .courses_list .carousel-item figure {
     margin: 0;
 }
 
-.courses .container .courses_reco .carousel-item figure img{
+.courses .courses_list .carousel-item figure img {
     border-style: solid;
     border-width: 1px;
     border-color: grey;
     width: 100%;
 }
-.courses .container .courses_reco .carousel-item figure figcaption{
+
+.courses .courses_list .carousel-item figure figcaption {
     margin: 5px;
     font-size: 15px;
     width: 100%;
 }
 
-.courses .container .courses_reco .carousel-item .author{
+.courses .courses_list .carousel-item .author {
     margin: 5px;
     font-weight: 400;
     font-size: 12px;
 }
 
-.courses .container .courses_reco .carousel-item .stars{
+.courses .courses_list .carousel-item .stars {
     color: yellowgreen;
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
-    
+    text-align: center;
 }
 
-.courses .container .courses_reco .carousel-item .price{
+.courses .courses_list .carousel-item .price {
     padding-left: 10px;
     margin: 5px;
+}
+
+.darken {
+    background-color: rgb(0, 0, 0, 20%) !important;
+}
+
+.w-10 {
+    width: 10% !important;
 }
 
 /* end courses */
 
 /* footer */
-footer{
+footer {
     margin-top: 50px;
     height: 70px;
     background-color: black;
 }
 
-footer .logo{
+footer .logo {
     width: 100px;
     margin: 10px 20px;
 }
