@@ -146,7 +146,13 @@ function calc_cards_per_slide_value(){
 
 (async function init() {
 
-    window.db = await (await fetch("https://ammardab3an-json-server.herokuapp.com/db")).json();
+    if(window._DEV_ENV){
+        window.db =  await (await fetch("./data/db.json")).json();
+    }
+    else{
+        window.db = await (await fetch("https://ammardab3an-json-server.herokuapp.com/db")).json();
+    }
+
     window.groups = Object.keys(db);
     window.selected_group = groups[0];
 
