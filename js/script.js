@@ -21,7 +21,7 @@ const CARDS_BP = {
     _2_md: 3,
     _3_lg: 4,
     _4_xl: 4,
-    _5_xxl: 6
+    _5_xxl: 4
 };
 
 // slides
